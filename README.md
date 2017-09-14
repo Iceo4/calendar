@@ -1,7 +1,7 @@
 # calendar
 小程序  日历组件 
 可以预示 可预订天数，显示节假日
-
+calendar/des/1.png
 // pages/calendar/calendar.js
 const app = getApp();
 let dayscount = 30; //预设天数
