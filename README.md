@@ -12,6 +12,8 @@ Page({
    * 页面的初始数据
    */
 	/*festivaltag也可以请求数据得到*/
+        
+  
   data: {
     checkInDay: '',
     checkOutDay: '',
@@ -27,3 +29,4 @@ Page({
     }
 
   },
+
