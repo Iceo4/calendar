@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container" catchtap='bindViewTap'>
+  <view >去选择时间</view>
+  <text>
+  入住：{{checkInDay}} 
+  
+  离店：{{checkOutDay}}
+  </text>
+  
+</view>

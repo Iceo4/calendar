@@ -1,0 +1,142 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+view,text{
+	margin: 0;
+	padding: 0;
+}
+.flex{
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+.flexc{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.flexb{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.flexa{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.flexcColumn{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.flexaColumn{
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-around;
+}
+.flexbColumn{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.f11{
+	font-size: 11px;
+	/*line-height: 11px;*/
+}
+.f12{
+	font-size: 12px;
+	/*line-height: 12px;*/
+}
+.f13{
+	font-size: 13px;
+	/*line-height: 13px;*/
+}
+.f14{
+	font-size: 14px;
+	/*line-height: 14px;*/
+}
+.f15{
+	font-size: 15px;
+	/*line-height: 15px;*/
+}
+.f16{
+	font-size: 16px;
+	/*line-height: 16px;*/
+}
+.f17{
+	font-size: 17px;
+	/*line-height:17px;*/
+}
+.f22{
+	font-size: 22px;
+	/*line-height: 22px;*/
+}
+.f25{
+	font-size: 25px;
+	/*line-height: 22px;*/
+}
+.c6{
+	color: #666666;
+}
+.c9{
+	color: #999999;
+}
+.c3{
+	color: #333333;
+}
+.pc{
+	color: #de530f;
+}
+.cWaring{
+	color: #e7530a;
+}
+.ellipsis1{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
+.ellipsis2{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.sure-bt{
+	width: 100%;
+	height: 100rpx;
+	min-height: 0;
+	margin:0;
+	padding:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32rpx;
+}
+.active-btn{
+	opacity: 0.8;
+}
+.border-b{
+	border-bottom: 1rpx solid #ebebeb;
+}
+.border-r{
+	border-right: 1rpx solid #ebebeb;
+}
+.flex1{
+	flex:1;
+}
+
+
+

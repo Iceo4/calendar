@@ -1,0 +1,88 @@
+<!--pages/calendar/calendar.wxml-->
+<wxs module="dateFormate">
+	var getYm = function(date){
+	 var arry = date.split('/');
+	 return arry[0]+'年'+arry[1]+'月';
+	}
+	var getDay = function(date){
+		var arry = date.split('/');
+	 	return arry[2];
+
+	}
+	var fillDays = function(date){
+		var _day = getDate(date).getDay();
+		var fillItem=[];
+		for(var k=0;k<_day;k++){
+			fillItem.push('fill')
+		}
+		return fillItem;
+	}
+	var showValue = function(date,festivaltag){
+		return festivaltag[date] ? festivaltag[date] :getDay(date);
+
+	}
+	var exceptDay = function (date,startDay,endDay){
+		return getDate(date)< getDate(startDay) || getDate(date)> getDate(endDay)
+	
+	}
+	module.exports = {
+  		getYm: getYm,
+  		getDay:getDay,
+  		fillDays:fillDays,
+  		showValue:showValue,
+  		exceptDay:exceptDay
+  		
+	};
+</wxs>
+<include src="../../comm/comm.wxml"/>
+<view class="container">
+	<view class="wk flexb">
+		<view class="wk-item ">
+			周日
+		</view>
+		<view class="wk-item">
+			周一
+		</view>
+		<view class="wk-item">
+			周二
+		</view>
+		<view class="wk-item">
+			周三
+		</view>
+		<view class="wk-item">
+			周四
+		</view>
+		<view class="wk-item">
+			周五
+		</view>
+		<view class="wk-item">
+			周六
+		</view>
+	</view>
+	<scroll-view scroll-y="true"  class="data-box">
+		<bloc wx:for="{{dates}}" wx:for-item="monthItem">
+			<view class="date-item" wx:key="{{monthItem[0]}}">
+				<view class="date-ym">
+					{{dateFormate.getYm(monthItem[0])}}
+				</view>
+				<view class="date-day">
+					<view class="fill date-day-item" wx:for="{{dateFormate.fillDays(monthItem[0])}}">
+					</view>
+					<block  wx:for="{{monthItem}}" wx:for-item="day" wx:for-index="dayindex">
+						<view class="date-day-item flexcColumn"  wx:if="{{dateFormate.exceptDay(day,startDay,endDay)}}">
+							<text class="show-date"  style="color:#acacac">{{dateFormate.showValue(day,festivaltag)}}</text>
+						</view>
+						<view class="date-day-item flexcColumn" catchtap="chooseDay" data-check-day="{{day}}" wx:else>
+							<text class="show-date active-day" wx:if="{{day==checkInDay}}" >入住</text>
+							<text class="show-date active-day" wx:elif="{{day==checkOutDay}}">离开</text>
+							<text class="show-date" wx:else>{{dateFormate.showValue(day,festivaltag)}}</text>
+						</view>
+					</block>
+				</view>
+			</view>
+		</bloc>
+	</scroll-view>
+
+
+
+</view>
