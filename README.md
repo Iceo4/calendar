@@ -1,10 +1,13 @@
 # calendar
+小程序  日历组件   
+可以预示 可预订天数，显示节假日  
+
 ![Image text](https://raw.githubusercontent.com/Iceo4/calendar/master/des/1.png)
 ![Image text](https://raw.githubusercontent.com/Iceo4/calendar/master/des/2.png)
 ![Image text](https://raw.githubusercontent.com/Iceo4/calendar/master/des/3.png)
-小程序  日历组件   
+  
 
-可以预示 可预订天数，显示节假日  
+  
 
 
 //pages/calendar/calendar.js   
